@@ -35,10 +35,10 @@ export default {
     }
   },
     methods: {
-    enterSearchWord() {
+    async enterSearchWord() {
       this.isLoading = true
       this.$store.commit('initializeMovieList')
-      this.$store.dispatch('fetchList', {
+      await this.$store.dispatch('fetchList', {
         searchWord: this.searchWord,
         pageNum: 1
         })
