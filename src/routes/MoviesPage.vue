@@ -68,10 +68,10 @@ export default {
     this.initIntersectionObserver()
   },
   methods: {
-    clickMovie(e) {
+    async clickMovie(e) {
       const imdbID = e.target.closest('li').id
       this.isLoading = true
-      this.$store.dispatch('fetchMovie', imdbID)
+      await this.$store.dispatch('fetchMovie', imdbID)
       setTimeout(() => {
                     this.isLoading = false
                 }, 5000)

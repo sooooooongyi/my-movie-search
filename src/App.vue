@@ -15,7 +15,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import "~bootswatch/dist/litera/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/litera/bootswatch";

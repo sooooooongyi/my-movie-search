@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import router from '~/routes'
 import createPersistedState from 'vuex-persistedstate'
+import { API_END_POINT, API_KEY } from '../api'
 
 export default createStore({
     plugins: [
@@ -56,7 +57,7 @@ export default createStore({
     actions: {
         async fetchList({ commit }, payload) {
             const { searchWord, pageNum } = payload
-            const list = await fetch(`${process.env.VUE_APP_API_END_POINT}?apikey=${process.env.VUE_APP_API_KEY}&s=${searchWord}&page=${pageNum}`)
+            const list = await fetch(`${API_END_POINT}?apikey=${API_KEY}&s=${searchWord}&page=${pageNum}`)
             .then(res => res.json())
             console.log(list)
 
@@ -66,7 +67,7 @@ export default createStore({
             })
         },
         async fetchMovie({ commit }, imdbID) {
-            const movie = await fetch(`${process.env.VUE_APP_API_END_POINT}?apikey=${process.env.VUE_APP_API_END_POINT}&i=${imdbID}&plot=full`)
+            const movie = await fetch(`${API_END_POINT}?apikey=${API_KEY}&i=${imdbID}&plot=full`)
             .then(res => res.json())
             commit('updateSelectedMovie', movie)
         },
