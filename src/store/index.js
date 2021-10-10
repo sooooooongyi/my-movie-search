@@ -56,7 +56,7 @@ export default createStore({
     actions: {
         async fetchList({ commit }, payload) {
             const { searchWord, pageNum } = payload
-            const list = await fetch(`https://www.omdbapi.com?apikey=7035c60c&s=${searchWord}&page=${pageNum}`)
+            const list = await fetch(`${process.env.VUE_APP_API_END_POINT}?apikey=${process.env.VUE_APP_API_KEY}&s=${searchWord}&page=${pageNum}`)
             .then(res => res.json())
             console.log(list)
 
@@ -66,7 +66,7 @@ export default createStore({
             })
         },
         async fetchMovie({ commit }, imdbID) {
-            const movie = await fetch(`https://www.omdbapi.com?apikey=7035c60c&i=${imdbID}&plot=full`)
+            const movie = await fetch(`${process.env.VUE_APP_API_END_POINT}?apikey=${process.env.VUE_APP_API_END_POINT}&i=${imdbID}&plot=full`)
             .then(res => res.json())
             commit('updateSelectedMovie', movie)
         },

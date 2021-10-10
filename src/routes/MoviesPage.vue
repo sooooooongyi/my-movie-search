@@ -108,7 +108,7 @@ export default {
 
 .title {
   display: inline-block;
-  width: auto;
+  width: 80%;
   padding: 0 auto;
   text-align: center;
 }
