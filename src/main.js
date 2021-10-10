@@ -1,10 +1,10 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import store from '~/store'
 import router from '~/routes'
 import 'bootswatch/dist/litera/bootstrap.min.css'
 
-const app = createApp(App)
+const app = Vue.createApp(App)
 
 app.use(store)
 app.use(router)
