@@ -14,7 +14,7 @@
           v-for="movie in likeMovieList"
           :id="movie.imdbID"
           :key="movie.imdbID"
-          class="card border-secondary mb-3"
+          class="card border-secondary mb-3 shadow p-3 bg-body rounded"
           @click="clickMovie">
           <img
             :src="movie.Poster !== 'N/A'

@@ -1,7 +1,11 @@
 import { createStore } from 'vuex'
 import router from '~/routes'
+import createPersistedState from 'vuex-persistedstate'
 
 export default createStore({
+    plugins: [
+        createPersistedState()
+    ],
     state() {
         return {
             searchWord: '',
