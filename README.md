@@ -16,7 +16,7 @@
 
 ## 배포
 
-[배포](https://hardcore-roentgen-18a9a0.netlify.app)
+[배포](https://songsong-movie.netlify.app)
 
 ## 프로젝트 설명
 
